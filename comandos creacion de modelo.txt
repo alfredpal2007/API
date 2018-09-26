@@ -1,0 +1,5 @@
+rails  new elApi --api -T
+rails g model Report usuario:string reporte:string foto:string direccion:string latitud:float longitud:float
+rails g model Comment usuario:string comentario:string report:references 
+rails db:migrate
+rails generate controller reports
